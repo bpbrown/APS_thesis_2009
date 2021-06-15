@@ -1,0 +1,42 @@
+#
+# Ben Brown 8/6/2009
+#
+# turns out this is page number aware.  Let's try again.
+#
+
+#dvips -P pdf -pp i-xv    main_body.dvi -o Front_matter.ps
+dvips -P pdf -n 15       main_body.dvi -o Front_matter.ps
+dvips -P pdf -p=16 -n 17 main_body.dvi -o Chapter_1.ps
+#dvips -P pdf -p 1 -pp 1-17    main_body.dvi -o Chapter_1.ps
+dvips -P pdf -pp 18-43   main_body.dvi -o Chapter_2.ps
+dvips -P pdf -pp 44-73   main_body.dvi -o Chapter_3.ps
+dvips -P pdf -pp 74-89   main_body.dvi -o Chapter_4.ps
+dvips -P pdf -pp 90-105  main_body.dvi -o Chapter_5.ps
+dvips -P pdf -pp 106-124 main_body.dvi -o Chapter_6.ps
+dvips -P pdf -pp 125-139 main_body.dvi -o Chapter_7.ps
+dvips -P pdf -pp 140-187 main_body.dvi -o Chapter_8.ps
+dvips -P pdf -pp 188-207 main_body.dvi -o Chapter_9.ps
+dvips -P pdf -pp 208-213 main_body.dvi -o Bibliography.ps
+
+ps2pdf Front_matter.ps
+ps2pdf Chapter_1.ps
+ps2pdf Chapter_2.ps
+ps2pdf Chapter_3.ps
+ps2pdf Chapter_4.ps
+ps2pdf Chapter_5.ps
+ps2pdf Chapter_6.ps
+ps2pdf Chapter_7.ps
+ps2pdf Chapter_8.ps
+ps2pdf Chapter_9.ps
+ps2pdf Bibliography.ps
+
+rm Front_matter.ps
+rm Bibliography.ps
+rm Chapter_?.ps
+
+mkdir split_apart
+mv Front_matter.pdf split_apart/.
+mv Chapter_?.pdf split_apart/.
+mv Bibliography.pdf split_apart/.
+
+echo "Conversion job done"

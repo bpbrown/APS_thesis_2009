@@ -1,0 +1,13 @@
+Figure assembled at 300dpi, then canvas size scaled so that x
+size=7inches right before EPS output.  Main figure in original sizing
+(7.5 inches in width). 
+
+Images used in making this figure:
+
+pub_mmc_vturf_3_shsl_4250_shell0_Vr.eps
+pub_mmc_vturf_3_4201_4308_Vp.eps
+pub_mmc_vturf_3_4201_4308_magVm.eps
+
+pub_ab2_vturf_3_shsl_2489_shell0_Vr.eps
+pub_ab2_vturf_3_2460_2499_Vp.eps
+pub_ab2_vturf_3_2460_2499_magVm.eps

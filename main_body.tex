@@ -1,0 +1,286 @@
+%\documentclass[typewriterstyle]{thesis}
+\documentclass[defaultstyle,11pt]{thesis}
+%\documentclass[modernstyle,11pt]{thesis}
+%\documentclass[defaultstyle,11pt,twoside,openright]{thesis}  %%  double-sided 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%  see documentation for information about  %%%%%%%%%%
+%%%%%%%%%%%  the options (11pt, defaultstyle, etc.)   %%%%%%%%%%
+%%%%%%%  http://www.colorado.edu/its/docs/latex/thesis/  %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%		\documentclass[typewriterstyle]{thesis}
+% 		\documentclass[modernstyle]{thesis}
+% 		\documentclass[modernstyle,11pt]{thesis}
+%	 	\documentclass[modernstyle,12pt]{thesis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%    load any packages which are needed    %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{latexsym}		% to get LASY symbols
+\usepackage{graphicx}		% to insert PostScript figures
+\usepackage{rotating}		% for sideways tables/figures
+\usepackage{natbib}
+\usepackage{deluxetable}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{hyperref}  % not working yet
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%       all the preamble material:       %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Use ApJ style citations in text
+\bibpunct{(}{)}{;}{a}{}{,}
+
+%\renewcommand{\bibstyle@aas}{\bibpunct{(}{)}{;}{a}{}{,}}% 
+%\@citestyle{aas}% 
+
+
+\title{Convection and Dynamo Action in Rapidly Rotating Suns}
+
+\author{B.~P.}{Brown}
+
+\otherdegrees{B.S., Harvey Mudd College, 2003}
+
+\degree{Doctor of Philosophy}		%  #1 {long descr.}
+	{Ph.D., Astrophysical and Planetary Sciences}   %  #2 {short descr.}
+
+\dept{Department of}			%  #1 {designation}
+	{Astrophysical and Planetary Sciences}		%  #2 {name}
+
+\advisor{Prof.}				%  #1 {title}
+	{Juri Toomre}			%  #2 {name}
+
+\reader{John Bally}
+\readerThree{Allan Sacha Brun}
+\readerFour{Keith Julien}         %  4rd person to sign thesis
+\readerFive{Mark Miesch}		%  3rd person to sign thesis
+\readerSix{Mark Rast}		%  2nd person to sign thesis
+
+
+%\readerSix{Prof.~Michael Shull}
+%\readerSeven{Prof.~Allen Sacha Brun}
+
+\abstract{  %\OnePageChapter	% one page only ??
+
+    When our Sun was young it rotated much more rapidly than 
+it does now. Observations of young, rapidly rotating stars indicate that many
+possess substantial magnetic activity and strong axisymmetric magnetic
+fields.  There is furthermore an observed correlation between the
+stellar rotation rate and surface magnetism.  Yet the origins of the
+magnetic activity or the correlation with rotation remain unclear.
+We conduct simulations of dynamo action in rapidly
+rotating suns with the 3-D MHD anelastic spherical harmonic (ASH) code
+to explore the complex coupling between rotation, convection and
+magnetism.   Here we study global-scale flows of differential rotation
+and meridional circulation as well as dynamo action realized in the
+bulk of the convection zone for stars rotating from one to fifteen
+times the current solar rate. 
+
+We find that more rapidly rotating stars generally have stronger
+flows of differential rotation but weaker meridional circulations that
+break into multiple cells in both radius and latitude.  Surprising
+localized states arise in the rapidly rotating simulations, with
+convection modulated in longitude.  In the most rapid rotators
+convection can be entirely confined to narrow active nests which
+persist for thousands of days and propagate through the shearing flow
+of differential rotation at their own distinct velocity.
+
+We find that substantial organized global-scale magnetic fields are
+achieved by dynamo action in these rapidly rotating suns. Striking wreaths of
+magnetism are built in the midst of the convection zone, coexisting
+with the turbulent convection. This is a great surprise, for
+many solar dynamo theories have suggested that a tachocline of
+penetration and shear at the base of the convection zone is a crucial
+ingredient for organized dynamo action, whereas these simulations
+generally do not include such tachoclines. Some dynamos achieved in these rapidly
+rotating states build persistent global-scale fields which maintain
+amplitude and polarity for thousands of days.  Other dynamos can
+undergo cycles of activity, with fields varying in strength and even
+changing in global-scale polarity.  As the
+magnetic fields wax and wane in strength, the primary response in the
+convective flows involves the axisymmetric differential rotation,
+which begins to vary on similar time scales.  Bands of relatively fast
+and slow fluid propagate toward the poles on time scales of roughly
+500~days.  In the Sun, similar patterns are observed in the poleward
+branch of the torsional oscillations, and these may represent a
+response to poleward propagating magnetic field deep below the solar
+surface.  
+
+In one simulation, rotating at three times the solar rate,
+we explore how the wreaths of magnetism are built and maintained by
+the differential rotation and the turbulent correlations.  We further
+explore whether a simple mean-field theory can reproduce our 3-D results
+and find several discrepancies.  We generally find that
+wreath-building dynamos are present in every region of parameter space
+we have sampled, including simulations of the solar dynamo.  We find
+that previous simulations had bottom boundary conditions which make
+wreath formation difficult if not impossible, but that new simulations
+of the solar dynamo can produce strong magnetic wreaths.
+Lastly, we show that wreaths of magnetism survive in the presence of a
+tachocline of penetration and shear at the base of the convection zone. 
+These wreaths fill the convection zone and undergo quasi-regular
+reversals of global-scale polarity.
+ 
+}
+
+\dedication[Dedication]{	% NEVER use \OnePageChapter here.
+	To my mother and father who have encouraged every step along
+        this path of discovery, and to Mindy who has made the journey one of joy.
+	}
+
+\acknowledgements{\vskip-0.5cm %\OnePageChapter	% *MUST* BE ONLY ONE PAGE!
+This journey has only been possible with the help of many friends.
+First and foremost, I thank my advisor Juri Toomre for his support,
+friendship, generosity and wise advice.  Juri has provided
+me with opportunities beyond compare. I cherish the many evenings I
+have spent with Juri and his wife Linda, and look forward to the many
+wonderful meals and celebrations to be shared together in the years to come.  
+
+My collaborators and co-authors have become close friends over the
+years.  Sacha Brun has provided constant and good advice, and
+reflections on scientific careers and life, even as he has undertaken his
+own journeys on these paths.  His European perspective is always
+refreshing.  I have always looked forward with pleasure to my visits with
+Mark Miesch at HAO.  His  positive outlook and deep insights have contributed greatly to my own
+growth, and his excitement about the discoveries contained herein has
+kept my own alive.  His thesis has been at my side for
+many years, and it became particularly helpful in the past months; I
+hope to one day write as well he does regularly.  And Mark, you're
+right: the high mountains do soothe the soul.  My thanks also go to Matt
+Browning, who walked these steps before me, and is now helping me to
+find my own way.
+Over the years Mark Rast has been a sage source of advice, helping me 
+remember what really matters in the pursuit of scientific discovery,
+and reminding me that the standard path to success is not the only one,
+and that it is perhaps not always the the best.
+Gwen Dickinson has been a friend and a constant eye of calm in the
+whirling storm that can be our research.  She has remained
+unflappably calm in the face of looming deadlines, and has saved us
+all from disaster (myself in particular) many, many times.  
+
+My office mates over the years, Jason Lisle, Geoff Vasil and Nick
+Nelson, have each helped shape this continuing adventure.  Jason reminded me
+early on of the importance of balancing life and science, and the
+value of time.  Geoff has become a dear friend, and
+many evenings have been spent together thinking on science and life,
+in our tower office or over good food and good beer.  We both venture forth
+now to postdocs in colder climes. Nick has helped me realize that I
+really have finally learned a few things of use.  Good luck sir, on
+your own path to discoveries!  Kyle Augustson and Nick Featherstone
+are part of our cohort as well; I would not be here now with out their
+aid.  I look forward to seeing where each of us ventures in the future.
+Along my path, I've had the pleasure of meeting and working with John
+Clyne and Alan Norton at NCAR, and Carter Emmart at the American
+Museum of Natural History.  These three have helped me realize how
+beautiful our science can be, and how enthusiastically it can be
+received when shown in the right light.  With them, I look forward to
+many fruitful years ahead.
+
+My close friends and housemates, Brennan Gantner and Than Putzig, have
+joined me in many wonderful adventures during our years in Boulder.
+To them and Licia Ray, I owe my sanity.   Ben Mates and Dave
+Schneider held the final watch at the Greenbriar estate, through the
+craziness of moving, writing and planning a wedding; during these
+times, they reminded me that this too would pass.  
+
+These adventures in science began at a young age when my father told
+me ``there are four fundamental forces of nature.  You should learn
+about them, how they work, what they are.''  This fueled a
+love for physics and then astronomy.  My mother and father have
+supported me with love on every step of this adventure.
+In recent days my path has been made clearer by the presence of my
+beloved, Mindy Wilkinson, who has been my companion and guide.  
+During dark days she reminds me that what we do is fundamentally
+really, really neat.  That it matters.  That people care.  And to me, that
+has value beyond words.  On the journeys ahead, we will tread our paths
+together, which brings me incomparable joy.
+
+I thank Juri Toomre, Mark Rast, Mark Miesch, Keith Julien, Sacha Brun,
+and John Bally for serving on my thesis committee.  Over the years,
+they each have acted to kindle my scientific enthusiasm, to provide
+perspective on life, and to help me find my way.
+It was an honor to have them present at the close of this chapter of life.
+
+~\vspace{5cm}
+
+This research has been supported by NASA through Heliophysics Theory
+Program grants NNG05G124G and NNX08AI57G.  I have additionally been
+supported through the NASA GSRP program by award number
+NNG05GN08H.   The simulations in this thesis were carried out with NSF
+PACI support of SDSC, PSC, TACC and NICS.
+In particular, these simulations ran variously on
+Blue Horizon, Datastar and Bluegene at SDSC, on Lemieux and Bigben at
+PSC, on Ranger at TACC and on Kraken at NICS.  Volume renderings used in the analysis and the
+field line tracings shown were produced using VAPOR
+\citep{Clyne_et_al_2007}.  None of this analysis would have been
+possible without the resources at Laboratory for Computational
+Dynamics (LCD) here at the University of Colorado.
+
+
+	}
+
+\ToCisShort	% a 1-page Table of Contents ??
+
+\LoFisShort	% a 1-page List of Figures ??
+%	\emptyLoF	% no List of Figures at all ??
+
+\LoTisShort	% a 1-page List of Tables ??
+%	\emptyLoT	% no List of Tables at all ??
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%       BEGIN DOCUMENT...         %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%  footnote style; default=\arabic  (numbered 1,2,3...)
+%%%%  others:  \roman, \Roman, \alph, \Alph, \fnsymbol
+%	"\fnsymbol" uses asterisk, dagger, double-dagger, etc.
+%	\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+%	\setcounter{footnote}{0}
+
+\begin{document}
+
+\input macros.tex       % file containing author's macro definitions
+\input chapter_1.tex			% Introduction
+\input chapter_2.tex			% Code description (MHD)
+\input chapter_3.tex			% Convective patterns in hydro cases
+\input chapter_4.tex			% Nests of convection, hydro
+\input chapter_5.tex			% Dynamo case D3
+\input chapter_6.tex			% Dynamo case D5
+\input chapter_7.tex			% Production of field in dynamo case D3
+\input chapter_8.tex			% Broader classes of dynamos
+\input chapter_9.tex			% Directions for the future: Wreath building in the Sun
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%  Bibliography %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\bibliographystyle{apj}
+%\bibliographystyle{gvthesis}
+%\bibliographystyle{bpbrown_thesis} % based on Geoff's file, but
+ 				   % designed to match ApJ format better
+\bibliographystyle{bpbrown_thesis_apj} % based on apj.bst file
+%\bibliographystyle{plain}	% or "siam", or "alpha", or "abbrv"
+				% see other styles (.bst files) in
+				% $TEXHOME/texmf/bibtex/bst
+
+%\nocite{*}		% list all refs in database, cited or not.
+
+\bibliography{bibliography}		% bib database file refs.bib
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%  Appendices %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\appendix	% don't forget this line if you have appendices!
+
+%\input appendix_A.tex			% file with Appendix A contents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%   THE END   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
